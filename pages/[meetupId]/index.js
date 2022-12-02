@@ -35,7 +35,7 @@ export const getStaticPaths = async () => {
 
   // if using getStaticProps, need to export getStaticPaths with it.
   return {
-    fallback: false,
+    fallback: "blocking",
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
